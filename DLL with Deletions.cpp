@@ -16,7 +16,7 @@ void insert_beginning(Node** head, int data)
   	newNode->prev = NULL;
   	
   	if((*head) != NULL)
-    	(*head)->prev = newNode;
+    		(*head)->prev = newNode;
 
   	(*head) = newNode;
 }
@@ -32,13 +32,13 @@ void insert_end(Node** head, int data)
 
   	if(*head == NULL)
 	{
-    	newNode->prev = NULL;
-    	*head = newNode;
-    	return;
+    		newNode->prev = NULL;
+    		*head = newNode;
+    		return;
   	}
 
   	while(temp->next != NULL)
-    	temp = temp->next;
+    		temp = temp->next;
     
   	temp->next = newNode;
   	newNode->prev = temp;
@@ -47,16 +47,16 @@ void insert_end(Node** head, int data)
 void delete_indexN(Node** head, Node* del_node) 
 {
   	if (*head == NULL || del_node == NULL)
-    	return;
+    		return;
 
   	if (*head == del_node)
-    	*head = del_node->next;
+    		*head = del_node->next;
 
   	if (del_node->next != NULL)
-    	del_node->next->prev = del_node->prev;
+    		del_node->next->prev = del_node->prev;
 
   	if (del_node->prev != NULL)
-    	del_node->prev->next = del_node->next;
+    		del_node->prev->next = del_node->next;
 
   	free(del_node);
 }
@@ -68,12 +68,12 @@ void printLinkedList(Node* node)
    	while(node != NULL)
 	{
 		std::cout << "node: " << node->data;
-      	node = node->next;
+      		node = node->next;
       	
 		if(node == NULL)
-      	std::cout << " ==> NULL";
-      	else
-      	std::cout << " <==> ";
+      		std::cout << " ==> NULL";
+      		else
+      		std::cout << " <==> ";
    	}
 }
 
