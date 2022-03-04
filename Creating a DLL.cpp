@@ -16,7 +16,7 @@ void insert_node(Node** head, int data)
    	
 	if((*head) != NULL) 
 	{
-      	(*head)->prev = newNode;
+      		(*head)->prev = newNode;
    	}
    	
    	(*head) = newNode;
@@ -29,12 +29,12 @@ void printLinkedList(Node* node)
    	while(node != NULL)
 	{
 		std::cout << "node: " << node->data;
-      	node = node->next;
+		node = node->next;
       	
 		if(node == NULL)
-      	std::cout << " ==> NULL";
-      	else
-      	std::cout << " <==> ";
+      		std::cout << " ==> NULL";
+      		else
+      		std::cout << " <==> ";
    	}
 }
 
